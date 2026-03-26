@@ -1,0 +1,911 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JLPT 練習問題（語彙・文法・読解）</title>
+    <style>
+      body {
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          sans-serif;
+        line-height: 1.6;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        background: #f5f7fb;
+      }
+      h1,
+      h2,
+      h3 {
+        color: #111827;
+      }
+      h1 {
+        text-align: center;
+        margin-bottom: 10px;
+      }
+      .toc {
+        background: #e5e7eb;
+        padding: 10px 14px;
+        border-radius: 8px;
+        margin-bottom: 20px;
+        font-size: 0.95rem;
+      }
+      .toc a {
+        margin-right: 12px;
+        text-decoration: none;
+        color: #2563eb;
+      }
+      .section {
+        background: #ffffff;
+        border-radius: 8px;
+        padding: 16px 20px;
+        margin-bottom: 18px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+      }
+      .section h2 {
+        border-left: 4px solid #2563eb;
+        padding-left: 8px;
+        margin-top: 0;
+      }
+      .question {
+        margin-bottom: 14px;
+        padding-bottom: 10px;
+        border-bottom: 1px dashed #ddd;
+      }
+      .question:last-child {
+        border-bottom: none;
+      }
+      .q-text {
+        font-weight: 600;
+        margin-bottom: 6px;
+      }
+      .options label {
+        display: block;
+        margin-left: 8px;
+        cursor: pointer;
+      }
+      .meta {
+        font-size: 0.9em;
+        color: #4b5563;
+        margin-bottom: 4px;
+      }
+      button {
+        padding: 9px 16px;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        font-size: 0.95rem;
+        margin-right: 8px;
+      }
+      .btn-main {
+        background: #2563eb;
+        color: #fff;
+      }
+      .btn-sub {
+        background: #e5e7eb;
+        color: #111827;
+      }
+      .result {
+        margin-top: 10px;
+        font-weight: 600;
+      }
+      .correct {
+        color: #16a34a;
+      }
+      .wrong {
+        color: #dc2626;
+      }
+      .answer-detail {
+        font-size: 0.9em;
+        margin-top: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JLPT 練習問題（語彙・文法・読解）</h1>
+    <p class="meta">
+      日本語能力試験（JLPT）の練習用ページです。<br />
+      各セクションごとに採点することも、全体をまとめて採点することもできます。
+    </p>
+
+    <!-- MỤC LỤC -->
+    <div class="toc">
+      <strong>目次 / Mục lục:</strong>
+      <a href="#goi">語彙・文字</a>
+      <a href="#bunpo">文法</a>
+      <a href="#dokkai">読解</a>
+      <a href="#imi">意味が近い言葉</a>
+      <a href="#tsukaikata">使い方</a>
+      <button class="btn-main" id="gradeAll">
+        全体を採点 / Chấm điểm toàn bài
+      </button>
+    </div>
+
+    <!-- 語彙・文字 -->
+    <div class="section" id="goi">
+      <h2>語彙・文字（読み方・漢字・語彙）</h2>
+
+      <!-- もんだい1 読み方 -->
+      <h3>問題1　読み方</h3>
+
+      <div class="question" data-id="v1">
+        <div class="q-text">(1) 病院で<strong>血液</strong>を調べました。</div>
+        <div class="options">
+          <label><input type="radio" name="v1" value="1" /> ちいき</label>
+          <label><input type="radio" name="v1" value="2" /> けつえき</label>
+          <label><input type="radio" name="v1" value="3" /> ちえき</label>
+          <label><input type="radio" name="v1" value="4" /> けつえが</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v2">
+        <div class="q-text">
+          (2) 彼の話を聞き<strong>鳥肌</strong>が立った。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v2" value="1" /> みずはだ</label>
+          <label><input type="radio" name="v2" value="2" /> みねはだ</label>
+          <label><input type="radio" name="v2" value="3" /> うけはだ</label>
+          <label><input type="radio" name="v2" value="4" /> なみはだ</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v3">
+        <div class="q-text">
+          (3)
+          ふだんの生活にどんな<strong>変化</strong>があったのか、聞かせてください。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v3" value="1" /> へんか</label>
+          <label><input type="radio" name="v3" value="2" /> ふかん</label>
+          <label><input type="radio" name="v3" value="3" /> ふんか</label>
+          <label><input type="radio" name="v3" value="4" /> べんか</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v4">
+        <div class="q-text">
+          (4) 休んでいる学生が何人いるか、<strong>伝えました</strong>。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v4" value="1" /> しらせました</label>
+          <label><input type="radio" name="v4" value="2" /> かぞえました</label>
+          <label><input type="radio" name="v4" value="3" /> つたえました</label>
+          <label><input type="radio" name="v4" value="4" /> しめしました</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v5">
+        <div class="q-text">
+          (5) そのことを<strong>新聞</strong>で知りました。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v5" value="1" /> しんぶん</label>
+          <label><input type="radio" name="v5" value="2" /> にっこう</label>
+          <label><input type="radio" name="v5" value="3" /> にっつう</label>
+          <label><input type="radio" name="v5" value="4" /> にもの</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v6">
+        <div class="q-text">
+          (6) 毎日、<strong>専門的</strong>に勉強しています。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v6" value="1" /> せんもんてき</label>
+          <label><input type="radio" name="v6" value="2" /> せんべんてき</label>
+          <label><input type="radio" name="v6" value="3" /> へんやく</label>
+          <label><input type="radio" name="v6" value="4" /> いやく</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v7">
+        <div class="q-text">
+          (7) この学校では、留学生に<strong>授業</strong>を始めさせます。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v7" value="1" /> じょうじ</label>
+          <label><input type="radio" name="v7" value="2" /> じょうきゅう</label>
+          <label><input type="radio" name="v7" value="3" /> きょうぎ</label>
+          <label><input type="radio" name="v7" value="4" /> じぎょう</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v8">
+        <div class="q-text">
+          (8) このクラブは、毎月の部の<strong>会費</strong>を集めています。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v8" value="1" /> あつめて</label>
+          <label><input type="radio" name="v8" value="2" /> しゅうしゅう</label>
+          <label><input type="radio" name="v8" value="3" /> しゅうし</label>
+          <label><input type="radio" name="v8" value="4" /> うつした</label>
+        </div>
+      </div>
+
+      <!-- もんだい2 漢字 -->
+      <h3>問題2　漢字</h3>
+
+      <div class="question" data-id="v9">
+        <div class="q-text">
+          (9) この店は、いろいろな<strong>ながさ</strong>の楽器を売っている。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v9" value="1" /> 楽具</label>
+          <label><input type="radio" name="v9" value="2" /> 楽器</label>
+          <label><input type="radio" name="v9" value="3" /> 楽具</label>
+          <label><input type="radio" name="v9" value="4" /> 楽器</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v10">
+        <div class="q-text">(10) 携帯電話を<strong>かりました</strong>。</div>
+        <div class="options">
+          <label
+            ><input type="radio" name="v10" value="1" /> 代わしました</label
+          >
+          <label><input type="radio" name="v10" value="2" /> 換りました</label>
+          <label><input type="radio" name="v10" value="3" /> 貸りました</label>
+          <label><input type="radio" name="v10" value="4" /> 借りました</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v11">
+        <div class="q-text">
+          (11) <strong>けってん</strong>のない人はいないだろう。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v11" value="1" /> 欠点</label>
+          <label><input type="radio" name="v11" value="2" /> 決点</label>
+          <label><input type="radio" name="v11" value="3" /> 欠天</label>
+          <label><input type="radio" name="v11" value="4" /> 決天</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v12">
+        <div class="q-text">
+          (12) この古い橋は、<strong>げんざい</strong>は使われていない。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v12" value="1" /> 原在</label>
+          <label><input type="radio" name="v12" value="2" /> 原住</label>
+          <label><input type="radio" name="v12" value="3" /> 現在</label>
+          <label><input type="radio" name="v12" value="4" /> 現存</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v13">
+        <div class="q-text">
+          (13) <strong>みどり</strong>のペンで線を引きました。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v13" value="1" /> 黄</label>
+          <label><input type="radio" name="v13" value="2" /> 緑</label>
+          <label><input type="radio" name="v13" value="3" /> 青</label>
+          <label><input type="radio" name="v13" value="4" /> 赤</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v14">
+        <div class="q-text">
+          (14) 家族の幸せを<strong>ねがって</strong>、頭を下げた。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v14" value="1" /> 願って</label>
+          <label><input type="radio" name="v14" value="2" /> 願って</label>
+          <label><input type="radio" name="v14" value="3" /> 頼って</label>
+          <label><input type="radio" name="v14" value="4" /> 頼って</label>
+        </div>
+      </div>
+
+      <!-- もんだい3 文脈語彙 -->
+      <h3>問題3　文脈語彙</h3>
+
+      <div class="question" data-id="v15">
+        <div class="q-text">
+          (15) 重い本をたくさん入れた紙の袋が（　）、中身がおちてしまった。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v15" value="1" /> 折れて</label>
+          <label><input type="radio" name="v15" value="2" /> 濡れて</label>
+          <label><input type="radio" name="v15" value="3" /> 汚れて</label>
+          <label><input type="radio" name="v15" value="4" /> 破れて</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v16">
+        <div class="q-text">
+          (16)
+          この遊園地は、こどもは大人の半分の（　）で入ることができるだろう。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v16" value="1" /> 費用</label>
+          <label><input type="radio" name="v16" value="2" /> 料金</label>
+          <label><input type="radio" name="v16" value="3" /> 料金</label>
+          <label><input type="radio" name="v16" value="4" /> 物価</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v17">
+        <div class="q-text">
+          (17) 毎日少しずつセーターを（　）昨日やっと完成した。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v17" value="1" /> 編んで</label>
+          <label><input type="radio" name="v17" value="2" /> 飾って</label>
+          <label><input type="radio" name="v17" value="3" /> 編んで</label>
+          <label><input type="radio" name="v17" value="4" /> 結んで</label>
+        </div>
+      </div>
+
+      <!-- 語彙 thêm từ trang khác -->
+      <h3>語彙（別ページの問題）</h3>
+
+      <div class="question" data-id="v18">
+        <div class="q-text">
+          (18) 次の試合で（　　　）相手は、去年の優勝者だ。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v18" value="1" /> 戦う</label>
+          <label><input type="radio" name="v18" value="2" /> 輝く</label>
+          <label><input type="radio" name="v18" value="3" /> 襲う</label>
+          <label><input type="radio" name="v18" value="4" /> 曲げる</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v19">
+        <div class="q-text">
+          (19)
+          私は建築を勉強しているので、日本の家の建て方に（　　　）があります。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v19" value="1" /> 上手</label>
+          <label><input type="radio" name="v19" value="2" /> 意味</label>
+          <label><input type="radio" name="v19" value="3" /> 趣味</label>
+          <label><input type="radio" name="v19" value="4" /> 興味</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v20">
+        <div class="q-text">
+          (20) 喫茶店のドアを開けたら、コーヒーのいい（　　　）がした。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v20" value="1" /> 味</label>
+          <label><input type="radio" name="v20" value="2" /> 香り</label>
+          <label><input type="radio" name="v20" value="3" /> 色</label>
+          <label><input type="radio" name="v20" value="4" /> 気分</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v21">
+        <div class="q-text">
+          (21)
+          今日のコンサートでピアノを（　　　）するのは、有名なピアニストだ。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v21" value="1" /> 演奏</label>
+          <label><input type="radio" name="v21" value="2" /> 演技</label>
+          <label><input type="radio" name="v21" value="3" /> 活動</label>
+          <label><input type="radio" name="v21" value="4" /> 行動</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v22">
+        <div class="q-text">
+          (22) 交通事故を（　　　）、自動車専用道路に信号が付けられた。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v22" value="1" /> 下げる</label>
+          <label><input type="radio" name="v22" value="2" /> 上る</label>
+          <label><input type="radio" name="v22" value="3" /> 防ぐ</label>
+          <label><input type="radio" name="v22" value="4" /> やめる</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v23">
+        <div class="q-text">
+          (23) この靴はかかとの足に（　　　）合っているので、歩きやすいです。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v23" value="1" /> ぴったり</label>
+          <label><input type="radio" name="v23" value="2" /> ぺらぺら</label>
+          <label><input type="radio" name="v23" value="3" /> ふらふら</label>
+          <label><input type="radio" name="v23" value="4" /> ぐらぐら</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v24">
+        <div class="q-text">
+          (24)
+          そのボタンを押せば、テレビが（　　　）うれば、どこでも見ることができる。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v24" value="1" /> スポーツ</label>
+          <label><input type="radio" name="v24" value="2" /> チャンネル</label>
+          <label><input type="radio" name="v24" value="3" /> リサイクル</label>
+          <label><input type="radio" name="v24" value="4" /> 派手</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="v25">
+        <div class="q-text">
+          (25) この国の主な生産物は米で、外国にむけてお米を（　　　）している。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="v25" value="1" /> 輸出</label>
+          <label><input type="radio" name="v25" value="2" /> 立派</label>
+          <label><input type="radio" name="v25" value="3" /> 盛ん</label>
+          <label><input type="radio" name="v25" value="4" /> にぎやか</label>
+        </div>
+      </div>
+
+      <button class="btn-main grade-section" data-section="goi">
+        このセクションを採点 / Chấm phần này
+      </button>
+      <button class="btn-sub reset-section" data-section="goi">
+        リセット / Làm lại
+      </button>
+      <div class="result" id="res-goi"></div>
+    </div>
+
+    <!-- 文法（tạm để trống, bạn có thể thêm sau nếu muốn đầy đủ hơn） -->
+    <div class="section" id="bunpo">
+      <h2>文法（Grammar）</h2>
+
+<div class="question" data-id="g1">
+  <div class="q-text">(1) A町の図書館には、本（　）、雑誌やCDなども置いてある。</div>
+  <div class="options">
+    <label><input type="radio" name="g1" value="1"> によって</label>
+    <label><input type="radio" name="g1" value="2"> にとって</label>
+    <label><input type="radio" name="g1" value="3"> のことで</label>
+    <label><input type="radio" name="g1" value="4"> のほかに</label>
+  </div>
+</div>
+
+<div class="question" data-id="g2">
+  <div class="q-text">(2) 『キムラ・ブック』って本屋、知ってる？</div>
+  <div class="options">
+    <label><input type="radio" name="g2" value="1"> と</label>
+    <label><input type="radio" name="g2" value="2"> って</label>
+    <label><input type="radio" name="g2" value="3"> なんか</label>
+    <label><input type="radio" name="g2" value="4"> なら</label>
+  </div>
+</div>
+
+<div class="question" data-id="g3">
+  <div class="q-text">(3) 初めてスキーをしたので、安全なところで少しだけ（　）わかった。</div>
+  <div class="options">
+    <label><input type="radio" name="g3" value="1"> 大変さが</label>
+    <label><input type="radio" name="g3" value="2"> 大変だから</label>
+    <label><input type="radio" name="g3" value="3"> 大変らしさが</label>
+    <label><input type="radio" name="g3" value="4"> 大変なのが</label>
+  </div>
+</div>
+
+<div class="question" data-id="g4">
+  <div class="q-text">(4) 今朝、目覚まし時計が鳴らなかった（　）、寝坊してしまった。</div>
+  <div class="options">
+    <label><input type="radio" name="g4" value="1"> せいで</label>
+    <label><input type="radio" name="g4" value="2"> ところで</label>
+    <label><input type="radio" name="g4" value="3"> せいに</label>
+    <label><input type="radio" name="g4" value="4"> 場合</label>
+  </div>
+</div>
+
+<div class="question" data-id="g6">
+  <div class="q-text">(6) 「すみません。お手洗いはどこですか。」→「あちらに（　）。」</div>
+  <div class="options">
+    <label><input type="radio" name="g6" value="1"> おります</label>
+    <label><input type="radio" name="g6" value="2"> ございます</label>
+    <label><input type="radio" name="g6" value="3"> いたします</label>
+    <label><input type="radio" name="g6" value="4"> いらっしゃいます</label>
+  </div>
+</div>
+
+<div class="question" data-id="g8">
+  <div class="q-text">(8) 医者に「無理を（　）」と言われた。</div>
+  <div class="options">
+    <label><input type="radio" name="g8" value="1"> しませんでした</label>
+    <label><input type="radio" name="g8" value="2"> しないように</label>
+    <label><input type="radio" name="g8" value="3"> しなかったのに</label>
+    <label><input type="radio" name="g8" value="4"> していませんが</label>
+  </div>
+</div>
+
+<div class="question" data-id="g9">
+  <div class="q-text">(9) 財布に500円（　）残っていた。</div>
+  <div class="options">
+    <label><input type="radio" name="g9" value="1"> ぐらい</label>
+    <label><input type="radio" name="g9" value="2"> ぐらいは</label>
+    <label><input type="radio" name="g9" value="3"> ぐらしか</label>
+    <label><input type="radio" name="g9" value="4"> ぐらいしか</label>
+  </div>
+</div>
+
+<div class="question" data-id="g10">
+  <div class="q-text">(10) 次に、鍋に油を入れて、100度（　）温めてください。</div>
+  <div class="options">
+    <label><input type="radio" name="g10" value="1"> になるまで</label>
+    <label><input type="radio" name="g10" value="2"> になになって</label>
+    <label><input type="radio" name="g10" value="3"> になっていって</label>
+    <label><input type="radio" name="g10" value="4"> にするより</label>
+  </div>
+</div>
+
+<div class="question" data-id="g11">
+  <div class="q-text">(11) 私の夢は、世界中の（　）愛される車を作ることだ。</div>
+  <div class="options">
+    <label><input type="radio" name="g11" value="1"> 誰に</label>
+    <label><input type="radio" name="g11" value="2"> 誰でも</label>
+    <label><input type="radio" name="g11" value="3"> 誰からも</label>
+    <label><input type="radio" name="g11" value="4"> 誰かにでも</label>
+  </div>
+</div>
+
+<div class="question" data-id="g12">
+  <div class="q-text">(12) 妻は動物が好きなので、今日帰ったら妻と（　）。</div>
+  <div class="options">
+    <label><input type="radio" name="g12" value="1"> 話し合うつもりです</label>
+    <label><input type="radio" name="g12" value="2"> 話し合ってみるつもりです</label>
+    <label><input type="radio" name="g12" value="3"> 話し合いたいに違いありません</label>
+    <label><input type="radio" name="g12" value="4"> 話し合っておけばいいんです</label>
+  </div>
+</div>
+
+<div class="question" data-id="g13">
+  <div class="q-text">(13) 写真だと言われて見せられたら（　）。</div>
+  <div class="options">
+    <label><input type="radio" name="g13" value="1"> 信じられそうにない</label>
+    <label><input type="radio" name="g13" value="2"> 信じられなかったらしい</label>
+    <label><input type="radio" name="g13" value="3"> 信じてしまいそうだ</label>
+    <label><input type="radio" name="g13" value="4"> 信じていたそうだ</label>
+  </div>
+</div>
+
+<div class="question" data-id="g14">
+  <div class="q-text">(14) 黒い古い冷蔵庫は30年（　）。</div>
+  <div class="options">
+    <label><input type="radio" name="g14" value="1"> 一つ壊れてもおかしくない</label>
+    <label><input type="radio" name="g14" value="2"> 古いもので</label>
+    <label><input type="radio" name="g14" value="3"> ふるく</label>
+    <label><input type="radio" name="g14" value="4"> 使っている</label>
+  </div>
+</div>
+
+<button class="btn-main grade-section" data-section="bunpo">このセクションを採点</button>
+<button class="btn-sub reset-section" data-section="bunpo">リセット</button>
+<div class="result" id="res-bunpo"></div>
+
+    <!-- 読解（tạm để trống để bạn tự thêm đoạn dài nếu muốn） -->
+    <div class="section" id="dokkai">
+      <h2>読解（Reading）</h2>
+      <p class="meta">
+        Bạn có thể thêm các đoạn đọc + câu hỏi từ ảnh đọc hiểu vào đây.
+      </p>
+      <button class="btn-main grade-section" data-section="dokkai">
+        このセクションを採点
+      </button>
+      <button class="btn-sub reset-section" data-section="dokkai">
+        リセット
+      </button>
+      <div class="result" id="res-dokkai"></div>
+    </div>
+
+    <!-- 意味が近い言葉 -->
+    <div class="section" id="imi">
+      <h2>意味が近い言葉</h2>
+
+      <div class="question" data-id="m26">
+        <div class="q-text">(26) 山本さんが怒る理由は何ですか。</div>
+        <div class="options">
+          <label
+            ><input type="radio" name="m26" value="1" /> すぐ忘れます</label
+          >
+          <label
+            ><input type="radio" name="m26" value="2" /> すぐ怒ります</label
+          >
+          <label
+            ><input type="radio" name="m26" value="3" /> すぐ泣きます</label
+          >
+          <label
+            ><input type="radio" name="m26" value="4" /> すぐ心配します</label
+          >
+        </div>
+      </div>
+
+      <div class="question" data-id="m27">
+        <div class="q-text">
+          (27) 小林さんは、その話を<strong>疑っている</strong>ようだ。
+        </div>
+        <div class="options">
+          <label
+            ><input type="radio" name="m27" value="1" />
+            本当ではないと思っている</label
+          >
+          <label
+            ><input type="radio" name="m27" value="2" />
+            本当だと思っている</label
+          >
+          <label
+            ><input type="radio" name="m27" value="3" /> よく知らない</label
+          >
+          <label
+            ><input type="radio" name="m27" value="4" /> よく知っている</label
+          >
+        </div>
+      </div>
+
+      <div class="question" data-id="m29">
+        <div class="q-text">(29) 機会があれば、行ってみたいです。</div>
+        <div class="options">
+          <label><input type="radio" name="m29" value="1" /> サービス</label>
+          <label><input type="radio" name="m29" value="2" /> アルバイト</label>
+          <label><input type="radio" name="m29" value="3" /> チャンス</label>
+          <label><input type="radio" name="m29" value="4" /> アイデア</label>
+        </div>
+      </div>
+
+      <div class="question" data-id="m30">
+        <div class="q-text">
+          (30) 田中さんは<strong>相変わらず</strong>忙しいようだ。
+        </div>
+        <div class="options">
+          <label><input type="radio" name="m30" value="1" /> 前と同じで</label>
+          <label><input type="radio" name="m30" value="2" /> 新しくて</label>
+          <label><input type="radio" name="m30" value="3" /> 私にとって</label>
+          <label><input type="radio" name="m30" value="4" /> 私と違って</label>
+        </div>
+      </div>
+
+      <button class="btn-main grade-section" data-section="imi">
+        このセクションを採点
+      </button>
+      <button class="btn-sub reset-section" data-section="imi">リセット</button>
+      <div class="result" id="res-imi"></div>
+    </div>
+
+    <!-- 使い方 -->
+    <div class="section" id="tsukaikata">
+      <h2>ことばの使い方</h2>
+
+      <div class="question" data-id="u31">
+        <div class="q-text">(31) 修理</div>
+        <div class="options">
+          <label
+            ><input type="radio" name="u31" value="1" />
+            友達とけんかしてしまったので、謝って関係を修理したい。</label
+          >
+          <label
+            ><input type="radio" name="u31" value="2" />
+            教室で、先生に日本語の音声を修理してもらった。</label
+          >
+          <label
+            ><input type="radio" name="u31" value="3" />
+            壊れた冷蔵庫を持ってきたので、修理してください。</label
+          >
+          <label
+            ><input type="radio" name="u31" value="4" />
+            手にけががあったので、病院に行って医者に修理してもらった。</label
+          >
+        </div>
+      </div>
+
+      <div class="question" data-id="u32">
+        <div class="q-text">(32) 親しい</div>
+        <div class="options">
+          <label
+            ><input type="radio" name="u32" value="1" />
+            彼女とは去年まで話したことがなかったが、一緒に食事をしてから親しくなった。</label
+          >
+          <label
+            ><input type="radio" name="u32" value="2" />
+            会計の人は、毎日忙しそうにしているが、最初から新しい仕事に親しくなった。</label
+          >
+          <label
+            ><input type="radio" name="u32" value="3" />
+            私は毎日車の本を見ているので、暖かいデザインもいいので、とても親しい。</label
+          >
+          <label
+            ><input type="radio" name="u32" value="4" />
+            私は毎日車の本を見ているので、車の種類にとても親しい。</label
+          >
+        </div>
+      </div>
+
+      <div class="question" data-id="u33">
+        <div class="q-text">(33) 締め切り</div>
+        <div class="options">
+          <label
+            ><input type="radio" name="u33" value="1" />
+            この電車は次の駅が締め切りなので、そこから先に行くにはバスしかありません。</label
+          >
+          <label
+            ><input type="radio" name="u33" value="2" />
+            このドラマが好きで毎週見ていたが、今日で締め切りなので寂しい。</label
+          >
+          <label
+            ><input type="radio" name="u33" value="3" />
+            マラソンの選手たちは、40キロメートル先の締め切りに向かって走り出した。</label
+          >
+          <label
+            ><input type="radio" name="u33" value="4" />
+            スピーチ大会に申し込む人は、明日が締め切りなので忘れないようにしてください。</label
+          >
+        </div>
+      </div>
+
+      <div class="question" data-id="u34">
+        <div class="q-text">(34) ゆでる</div>
+        <div class="options">
+          <label
+            ><input type="radio" name="u34" value="1" />
+            寝る前に熱いお風呂に入って、体をゆでた。</label
+          >
+          <label
+            ><input type="radio" name="u34" value="2" />
+            湯の入った鍋に野菜を入れて、5分ゆでた。</label
+          >
+          <label
+            ><input type="radio" name="u34" value="3" />
+            寒かったので、ストーブをつけて部屋をゆでた。</label
+          >
+          <label
+            ><input type="radio" name="u34" value="4" />
+            お茶が冷めてしまったので、電子レンジでゆでて飲んだ。</label
+          >
+        </div>
+      </div>
+
+      <div class="question" data-id="u35">
+        <div class="q-text">(35) 渋滞</div>
+        <div class="options">
+          <label
+            ><input type="radio" name="u35" value="1" />
+            このバスの出る時はたくさんの人で渋滞していて、乗ることができなかった。</label
+          >
+          <label
+            ><input type="radio" name="u35" value="2" />
+            朝の通勤時間は車がたくさんある渋滞で、車が前に進まない。</label
+          >
+          <label
+            ><input type="radio" name="u35" value="3" />
+            今週は出張や会議が多くて、スケジュールが渋滞している。</label
+          >
+          <label
+            ><input type="radio" name="u35" value="4" />
+            一度にたくさんのことを説明されたので、頭の中が渋滞してしまった。</label
+          >
+        </div>
+      </div>
+
+      <button class="btn-main grade-section" data-section="tsukaikata">
+        このセクションを採点
+      </button>
+      <button class="btn-sub reset-section" data-section="tsukaikata">
+        リセット
+      </button>
+      <div class="result" id="res-tsukaikata"></div>
+    </div>
+
+    <script>
+      // Đáp án
+      const answerKey = {
+        // 語彙・文字
+        v1: 2,
+        v2: 4,
+        v3: 1,
+        v4: 3,
+        v5: 1,
+        v6: 1,
+        v7: 4,
+        v8: 2,
+        v9: 2,
+        v10: 4,
+        v11: 1,
+        v12: 3,
+        v13: 2,
+        v14: 1,
+        v15: 4,
+        v16: 2,
+        v17: 1,
+        v18: 1,
+        v19: 4,
+        v20: 2,
+        v21: 1,
+        v22: 3,
+        v23: 1,
+        v24: 2,
+        v25: 1,
+        // 意味が近い
+        m26: 2,
+        m27: 1,
+        m29: 3,
+        m30: 1,
+        // 使い方
+        u31: 3,
+        u32: 1,
+        u33: 4,
+        u34: 2,
+        u35: 2,
+        // 文法・読解: bạn có thể thêm sau theo cùng format
+        g1:4,
+        g2:2,
+        g3:1,
+        g4:1,
+        g5:2,
+        g6:2,
+        g8:2,
+        g9:4,
+        g10:1,
+        g11:3,
+        g12:1,
+        g13:3,
+        g14:4,
+
+      };
+
+      function gradeSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        const questions = section.querySelectorAll(".question");
+        let score = 0;
+        let total = 0;
+        let detailHtml = "";
+
+        questions.forEach((q) => {
+          const id = q.getAttribute("data-id");
+          if (!answerKey[id]) return; // nếu chưa có đáp án, bỏ qua
+          total++;
+          const selected = q.querySelector(`input[name="${id}"]:checked`);
+          const correct = answerKey[id];
+
+          if (!selected) {
+            detailHtml += `<div class="answer-detail wrong">${id}: 未回答 / Chưa trả lời</div>`;
+            return;
+          }
+          const chosen = parseInt(selected.value, 10);
+          if (chosen === correct) {
+            score++;
+            detailHtml += `<div class="answer-detail correct">${id}: 正解 / Đúng</div>`;
+          } else {
+            detailHtml += `<div class="answer-detail wrong">${id}: 不正解 / Sai（正解: ${correct}）</div>`;
+          }
+        });
+
+        const resDiv = document.getElementById("res-" + sectionId);
+        resDiv.innerHTML = `結果 / Kết quả: <strong>${score} / ${total}</strong><br>${detailHtml}`;
+      }
+
+      function resetSection(sectionId) {
+        const section = document.getElementById(sectionId);
+        const inputs = section.querySelectorAll('input[type="radio"]');
+        inputs.forEach((i) => (i.checked = false));
+        const resDiv = document.getElementById("res-" + sectionId);
+        if (resDiv) resDiv.innerHTML = "";
+      }
+
+      document.querySelectorAll(".grade-section").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const sec = btn.getAttribute("data-section");
+          gradeSection(sec);
+        });
+      });
+
+      document.querySelectorAll(".reset-section").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const sec = btn.getAttribute("data-section");
+          resetSection(sec);
+        });
+      });
+
+      document.getElementById("gradeAll").addEventListener("click", () => {
+        ["goi", "bunpo", "dokkai", "imi", "tsukaikata"].forEach((id) =>
+          gradeSection(id),
+        );
+      });
+    </script>
+  </body>
+</html>
